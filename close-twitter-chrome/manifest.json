@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "Close Twitter",
+  "version": "0.0.1",
+
+  "description": "Closes Twitter browser tab after some minutes. You can add any other url, but Twitter is the default url",
+  "homepage_url": "https://github.com/iyanuashiri/close-twitter",
+
+  "icons": {
+    "48": "icons/Twitter-logo.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.twitter.com/*"],
+      "js": ["close-twitter.js"]
+    }
+  ],
+
+  "permissions": [
+    "tabs"
+  ],
+
+  "background": {
+    "scripts": ["background.js"]
+  }
+
+}

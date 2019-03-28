@@ -6,6 +6,7 @@ function registerWebsite() {
         urls: urlsInput.value.split(','),
         minute: minuteInput.value
     });
+    window.close();
 }
 
 document.querySelector('#register').addEventListener('click', registerWebsite);
